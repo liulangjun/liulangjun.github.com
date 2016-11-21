@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no,maximum-scale=1.0">
+	<title>Document</title>
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding:0;
+			list-style: none;
+			line-height: 100%;
+		}
+		img{
+			vertical-align: top;
+		}
+		header{
+			width: 16rem;
+			height: 3rem;
+			background: #344a61;
+		}
+		header .left{
+			width: 3rem;
+			height: 100%;
+			background: url(img/header.png) no-repeat center center;
+			float: left;
+			border-right: 1px solid #455c6e;
+			box-sizing: border-box;
+			background-size: 0.7rem 0.5rem;
+		}
+		header .right{
+			width: 3rem;
+			height: 100%;
+			background: url(img/header1.png) no-repeat center center;
+			float: right;
+			border-left: 1px solid #455c6e;
+			box-sizing: border-box;
+			background-size: 0.7rem 0.5rem;
+		}
+		header .center{
+			float: left;
+			width: 10rem;
+			height: 100%;
+			text-align: center;
+			line-height: 3rem;
+			color: #fff;
+			font-size: 0.9rem;
+		}
+		#contain{
+			width: 14rem;
+			margin: 0 auto;
+		}
+		#contain h2{
+			font-size: 0.7rem;
+			color: #bfbfbf;
+			margin: calc(7rem / 8) 0;
+		}
+		#contain .sec1{
+			width: 100%;
+			height: 17.8rem;
+			border-top: 1px solid #e5e5e5;
+		}
+		#contain .sec1 img{
+			width: 14rem;
+			height: 9.3rem;
+			margin-top: 1rem;
+		}
+		#contain .sec1 h3{
+			margin: calc(48rem / 40) 0 0.7rem;
+			font-size: 1rem;
+			font-family: '黑体';
+		}
+		#contain .sec1 article{
+			font-size: 0.8rem;
+			font-family: '黑体';
+			line-height: 1.3rem;
+			color: #676767;
+		}
+		#contain .sec2{
+			padding-top: 1rem;
+			height: 10.5rem;
+			width: 100%;
+			border-top: 1px solid #e5e5e5;
+			overflow: hidden;
+		}
+		#contain .sec2 img{
+			float: left;
+			width: 4rem;
+			height: 4rem;
+		}
+		#contain .sec2 .first{
+			height: calc(19rem / 4);
+			margin-bottom: 0.5rem;
+		}
+		#contain .sec2 article{
+			float: right;
+			width: 8.85rem;
+		}
+		#contain .sec2 article p{
+			font-size: 0.8rem;
+			line-height: 1.3rem;
+			color: #676767;
+		}
+		#contain .sec2 article h3{
+			font-family: '黑体';
+			font-size: 1rem;
+		}
+		#contain .sec3{
+			width: 14rem;
+			height: 16rem;
+			border-top: 1px solid #e5e5e5;
+		}
+		#contain .sec3 .box{
+			width: 14rem;
+			height: 10rem;
+			overflow: hidden;
+		}
+		#contain .sec3 .box .mg{
+			margin-right: -1rem;
+		}
+		#contain .sec3 .box img{
+			float: left;
+			width: 4rem;
+			height: 4rem;
+			margin-right: 1rem;
+			margin-bottom: 1rem;
+		}
+		#contain .sec3 h3{
+			margin-top: calc(5rem / 4);
+			margin-bottom: calc(38rem / 40);
+		}
+		#contain .sec3 p{
+			font-size: 0.8rem;
+			line-height: 1.3rem;
+			color: #676767;
+			margin-bottom: 1rem;
+		}
+		#contain .sec4 h3{
+			margin: calc(48rem / 40) 0 0.7rem;
+			font-size: 1rem;
+			font-family: '黑体';
+		}
+		#contain .sec4 p{
+			font-size: 0.8rem;
+			line-height: 1.1rem;
+			color: #676767;
+		}
+		#contain .sec4 div{
+			margin-top: 0.3rem;
+			padding-left: 5rem;
+			width: 9rem;
+			height: 4rem;
+			background: url(img/pic4.png) no-repeat left center;
+			background-size: 4rem 4rem;
+			margin-bottom: 1rem;
+		}
+		#contain .sec4 div i{
+			font-size: 0.6rem;
+			font-family: '微软雅黑';
+			color: #000;
+		}
+		#contain .sec5{
+			width: 14rem;
+			height: 9rem;
+			border-top: 1px solid #e5e5e5;
+		}
+		#contain .sec5 h3{
+			margin: calc(48rem / 40) 0 0.5rem;
+			font-size: 1rem;
+			font-family: '黑体';
+		}
+		#contain .sec5 p{
+			font-size: 0.8rem;
+			line-height: 1.1rem;
+			color: #676767;
+		}
+		#contain .sec5 div{
+			margin-left: 2rem;
+		}
+		#contain .sec5 div img{
+			width: 2.5rem;
+			height: 2.5rem;
+			margin-right: 1.1rem;
+			margin-top: 1rem;
+			margin-bottom: 1rem;
+		}
+		#contain .sec6{
+			width: 100%;
+			height: 4rem;
+			border-top: 1px solid #e5e5e5;
+			font-size: 0.7rem;
+			color: #8b8b8b;
+			text-align: center;
+		}
+		#contain .sec6 p:nth-child(1){
+			margin: 1.25rem auto 0.6rem;
+		}
+		footer{
+			padding-top: 0.5rem;
+			width: 16rem;
+			height: 2.5rem;
+			background: #000;
+		}
+		footer>div{
+			width: 16rem;
+			height: 1rem;
+			overflow: hidden;
+		}
+		footer>div img{
+			width: 1rem;
+			height: 1rem;
+			margin:0 0.5rem;
+			float: left;
+		}
+		footer p{
+			margin-top: 0.5rem;
+			text-align: center;
+			color: #757575;
+			font-size: 0.6rem;
+			font-family: '黑体';
+
+		}
+	</style>
+	<script type="text/javascript">
+		(function(win,doc){
+			win.addEventListener('resize',change,false);
+			change();
+			function change(){
+				doc.documentElement.style.fontSize = 20/320*doc.documentElement.clientWidth+'px';
+			}
+		})(window,document);
+	</script>
+</head>
+<body>
+	<header>
+		<div class="left"></div>
+		<div class="center">HEXAGONE</div>
+		<div class="right"></div>
+	</header>
+	<section id="contain">
+		<h2>HOMEPAGE</h2>
+		<section class="sec1">
+			<figure>
+				<img src="img/pic1.jpg" alt="">
+			</figure>
+			<h3>WELL,HELLO THERE!</h3>
+			<article>jkashd awehdeq jasbdj jehq ajshda ieqisda asdas dsd wdsa  awd h dhahd qiwhe ahwi wehhq  qwhe </article>
+		</section>
+		<section class="sec2">
+			<div class="first">
+				<img src="img/pic2.png" alt="">
+				<article>
+					<h3>EASY TO USE!</h3>
+					<p>THRSD sadn asnd qwmen asmd wkqje as wqej aksjd akjd wej</p>
+				</article>
+			</div>
+			<div class="second">
+				<img src="img/pic3.png" alt="">
+				<article>
+					<h3>BUILT WHIT CARE</h3>
+					<p>THRSD sadn das asd asdk xcn smd wkqje as wqej aksjd akjd wej</p>
+				</article>
+			</div>
+		</section>
+		<section class="sec3">
+			<article>
+				<h3>SOME OF OUR WORKS</h3>
+				<p>A admsad asd awkhe asd qwe asdi qeyk 12k ake qwe c eu </p>
+			</article>
+			<div class="box">
+				<div class="mg">
+					<img src="img/note1.jpg" alt="">									
+					<img src="img/note2.jpg" alt="">									
+					<img src="img/note3.jpg" alt="">									
+					<img src="img/note4.jpg" alt="">									
+					<img src="img/note5.jpg" alt="">									
+					<img src="img/note6.jpg" alt="">
+				</div>
+			</div>									
+		</section>
+		<section class="sec4">
+			<article>
+				<h3>TESTIMONIALS</h3>
+				<P>NSAMD ashdk asdh qwek asdjk ash wqekj qwejkq qwekj </P>
+			</article>
+			<div>
+				<p>namsd qwek qweh asdk qwe qwije scm wekjwq qwkej </p>
+				<i>Jhon Doe-Annoemu Buyer</i>
+			</div>
+		</section>
+		<section class="sec5">
+			<h3>GET SOME SOCAIL WITH US</h3>
+			<P>get newkas askdj asdn qwkej wek asdasd asd asd asd  qwej </P>
+			<div>
+					<img src="img/ft1.png" alt="">
+					<img src="img/ft2.png" alt="">
+					<img src="img/ft3.png" alt="">
+				</div>	
+		</section>
+		<section class="sec6">
+			<p>COPYRIGHT 2013</p>
+			<p>ALL RIGHTS RESERVERD</p>
+		</section>
+	</section>
+	<footer>
+		<div>
+				<img src="img/bg-ft.png" alt="">
+				<img src="img/bg-ft.png" alt="">
+				<img src="img/bg-ft.png" alt="">
+				<img src="img/bg-ft.png" alt="">
+				<img src="img/bg-ft.png" alt="">
+				<img src="img/bg-ft.png" alt="">
+				<img src="img/bg-ft.png" alt="">
+				<img src="img/bg-ft.png" alt="">
+		</div>
+		<p>FKWJE QWEJK QKWJE QWEJ </p>
+	</footer>
+</body>
+</html>
