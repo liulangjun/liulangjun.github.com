@@ -1,319 +1,393 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no,maximum-scale=1.0">
-	<title>Document</title>
-	<style type="text/css">
-		*{
-			margin: 0;
-			padding:0;
-			list-style: none;
-			line-height: 100%;
-		}
-		img{
-			vertical-align: top;
-		}
-		header{
-			width: 16rem;
-			height: 3rem;
-			background: #344a61;
-		}
-		header .left{
-			width: 3rem;
-			height: 100%;
-			background: url(img/header.png) no-repeat center center;
-			float: left;
-			border-right: 1px solid #455c6e;
-			box-sizing: border-box;
-			background-size: 0.7rem 0.5rem;
-		}
-		header .right{
-			width: 3rem;
-			height: 100%;
-			background: url(img/header1.png) no-repeat center center;
-			float: right;
-			border-left: 1px solid #455c6e;
-			box-sizing: border-box;
-			background-size: 0.7rem 0.5rem;
-		}
-		header .center{
-			float: left;
-			width: 10rem;
-			height: 100%;
-			text-align: center;
-			line-height: 3rem;
-			color: #fff;
-			font-size: 0.9rem;
-		}
-		#contain{
-			width: 14rem;
-			margin: 0 auto;
-		}
-		#contain h2{
-			font-size: 0.7rem;
-			color: #bfbfbf;
-			margin: calc(7rem / 8) 0;
-		}
-		#contain .sec1{
-			width: 100%;
-			height: 17.8rem;
-			border-top: 1px solid #e5e5e5;
-		}
-		#contain .sec1 img{
-			width: 14rem;
-			height: 9.3rem;
-			margin-top: 1rem;
-		}
-		#contain .sec1 h3{
-			margin: calc(48rem / 40) 0 0.7rem;
-			font-size: 1rem;
-			font-family: '黑体';
-		}
-		#contain .sec1 article{
-			font-size: 0.8rem;
-			font-family: '黑体';
-			line-height: 1.3rem;
-			color: #676767;
-		}
-		#contain .sec2{
-			padding-top: 1rem;
-			height: 10.5rem;
-			width: 100%;
-			border-top: 1px solid #e5e5e5;
-			overflow: hidden;
-		}
-		#contain .sec2 img{
-			float: left;
-			width: 4rem;
-			height: 4rem;
-		}
-		#contain .sec2 .first{
-			height: calc(19rem / 4);
-			margin-bottom: 0.5rem;
-		}
-		#contain .sec2 article{
-			float: right;
-			width: 8.85rem;
-		}
-		#contain .sec2 article p{
-			font-size: 0.8rem;
-			line-height: 1.3rem;
-			color: #676767;
-		}
-		#contain .sec2 article h3{
-			font-family: '黑体';
-			font-size: 1rem;
-		}
-		#contain .sec3{
-			width: 14rem;
-			height: 16rem;
-			border-top: 1px solid #e5e5e5;
-		}
-		#contain .sec3 .box{
-			width: 14rem;
-			height: 10rem;
-			overflow: hidden;
-		}
-		#contain .sec3 .box .mg{
-			margin-right: -1rem;
-		}
-		#contain .sec3 .box img{
-			float: left;
-			width: 4rem;
-			height: 4rem;
-			margin-right: 1rem;
-			margin-bottom: 1rem;
-		}
-		#contain .sec3 h3{
-			margin-top: calc(5rem / 4);
-			margin-bottom: calc(38rem / 40);
-		}
-		#contain .sec3 p{
-			font-size: 0.8rem;
-			line-height: 1.3rem;
-			color: #676767;
-			margin-bottom: 1rem;
-		}
-		#contain .sec4 h3{
-			margin: calc(48rem / 40) 0 0.7rem;
-			font-size: 1rem;
-			font-family: '黑体';
-		}
-		#contain .sec4 p{
-			font-size: 0.8rem;
-			line-height: 1.1rem;
-			color: #676767;
-		}
-		#contain .sec4 div{
-			margin-top: 0.3rem;
-			padding-left: 5rem;
-			width: 9rem;
-			height: 4rem;
-			background: url(img/pic4.png) no-repeat left center;
-			background-size: 4rem 4rem;
-			margin-bottom: 1rem;
-		}
-		#contain .sec4 div i{
-			font-size: 0.6rem;
-			font-family: '微软雅黑';
-			color: #000;
-		}
-		#contain .sec5{
-			width: 14rem;
-			height: 9rem;
-			border-top: 1px solid #e5e5e5;
-		}
-		#contain .sec5 h3{
-			margin: calc(48rem / 40) 0 0.5rem;
-			font-size: 1rem;
-			font-family: '黑体';
-		}
-		#contain .sec5 p{
-			font-size: 0.8rem;
-			line-height: 1.1rem;
-			color: #676767;
-		}
-		#contain .sec5 div{
-			margin-left: 2rem;
-		}
-		#contain .sec5 div img{
-			width: 2.5rem;
-			height: 2.5rem;
-			margin-right: 1.1rem;
-			margin-top: 1rem;
-			margin-bottom: 1rem;
-		}
-		#contain .sec6{
-			width: 100%;
-			height: 4rem;
-			border-top: 1px solid #e5e5e5;
-			font-size: 0.7rem;
-			color: #8b8b8b;
-			text-align: center;
-		}
-		#contain .sec6 p:nth-child(1){
-			margin: 1.25rem auto 0.6rem;
-		}
-		footer{
-			padding-top: 0.5rem;
-			width: 16rem;
-			height: 2.5rem;
-			background: #000;
-		}
-		footer>div{
-			width: 16rem;
-			height: 1rem;
-			overflow: hidden;
-		}
-		footer>div img{
-			width: 1rem;
-			height: 1rem;
-			margin:0 0.5rem;
-			float: left;
-		}
-		footer p{
-			margin-top: 0.5rem;
-			text-align: center;
-			color: #757575;
-			font-size: 0.6rem;
-			font-family: '黑体';
-
-		}
-	</style>
-	<script type="text/javascript">
-		(function(win,doc){
-			win.addEventListener('resize',change,false);
-			change();
-			function change(){
-				doc.documentElement.style.fontSize = 20/320*doc.documentElement.clientWidth+'px';
-			}
-		})(window,document);
-	</script>
+<!-- saved from url=(0021)http://www.flqin.com/ -->
+<html style="overflow: hidden; height: 100%;">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="keywords" content="web前端">
+    <meta name="description" content="六郎简历简介">
+	<link rel="stylesheet" href="dir/reset.css">
+	<link rel="stylesheet" href="dir/jquery.fullPage.css">
+	<link rel="stylesheet" href="dir/component.css">
+	<link rel="stylesheet" href="dir/index.css">
+	<title>个人站</title>
 </head>
-<body>
-	<header>
-		<div class="left"></div>
-		<div class="center">HEXAGONE</div>
-		<div class="right"></div>
-	</header>
-	<section id="contain">
-		<h2>HOMEPAGE</h2>
-		<section class="sec1">
-			<figure>
-				<img src="img/pic1.jpg" alt="">
-			</figure>
-			<h3>WELL,HELLO THERE!</h3>
-			<article>jkashd awehdeq jasbdj jehq ajshda ieqisda asdas dsd wdsa  awd h dhahd qiwhe ahwi wehhq  qwhe </article>
-		</section>
-		<section class="sec2">
-			<div class="first">
-				<img src="img/pic2.png" alt="">
-				<article>
-					<h3>EASY TO USE!</h3>
-					<p>THRSD sadn asnd qwmen asmd wkqje as wqej aksjd akjd wej</p>
-				</article>
-			</div>
-			<div class="second">
-				<img src="img/pic3.png" alt="">
-				<article>
-					<h3>BUILT WHIT CARE</h3>
-					<p>THRSD sadn das asd asdk xcn smd wkqje as wqej aksjd akjd wej</p>
-				</article>
-			</div>
-		</section>
-		<section class="sec3">
-			<article>
-				<h3>SOME OF OUR WORKS</h3>
-				<p>A admsad asd awkhe asd qwe asdi qeyk 12k ake qwe c eu </p>
-			</article>
-			<div class="box">
-				<div class="mg">
-					<img src="img/note1.jpg" alt="">									
-					<img src="img/note2.jpg" alt="">									
-					<img src="img/note3.jpg" alt="">									
-					<img src="img/note4.jpg" alt="">									
-					<img src="img/note5.jpg" alt="">									
-					<img src="img/note6.jpg" alt="">
-				</div>
-			</div>									
-		</section>
-		<section class="sec4">
-			<article>
-				<h3>TESTIMONIALS</h3>
-				<P>NSAMD ashdk asdh qwek asdjk ash wqekj qwejkq qwekj </P>
-			</article>
-			<div>
-				<p>namsd qwek qweh asdk qwe qwije scm wekjwq qwkej </p>
-				<i>Jhon Doe-Annoemu Buyer</i>
-			</div>
-		</section>
-		<section class="sec5">
-			<h3>GET SOME SOCAIL WITH US</h3>
-			<P>get newkas askdj asdn qwkej wek asdasd asd asd asd  qwej </P>
-			<div>
-					<img src="img/ft1.png" alt="">
-					<img src="img/ft2.png" alt="">
-					<img src="img/ft3.png" alt="">
-				</div>	
-		</section>
-		<section class="sec6">
-			<p>COPYRIGHT 2013</p>
-			<p>ALL RIGHTS RESERVERD</p>
-		</section>
-	</section>
-	<footer>
-		<div>
-				<img src="img/bg-ft.png" alt="">
-				<img src="img/bg-ft.png" alt="">
-				<img src="img/bg-ft.png" alt="">
-				<img src="img/bg-ft.png" alt="">
-				<img src="img/bg-ft.png" alt="">
-				<img src="img/bg-ft.png" alt="">
-				<img src="img/bg-ft.png" alt="">
-				<img src="img/bg-ft.png" alt="">
+<body style="overflow: hidden; height: 100%;">
+<!-- header navigation -->
+<div id="header" style="opacity: 0.3;"></div>
+<header style="opacity: 0;">
+	<div id="logo">
+		<div id="header_img"><img src="dir/logo.jpg" alt=""></div>
+		<div id="header_p">
+			<p id="header_p1">Personal</p>
+			<p id="header_p2">个人简历</p>
 		</div>
-		<p>FKWJE QWEJK QKWJE QWEJ </p>
-	</footer>
+	</div>
+	<nav>
+		<ul>
+			<li><a href="#page1" class="selected"><b>home</b></a></li>
+			<li><a href="#page2"><b>about me</b></a></li>
+			<li><a href="#page3"><b>skills</b></a></li>
+            <li><a href="#page4"><b>exripirence</b></a></li>
+            <li><a href="#page5"><b>works</b></a></li>
+			<li><a href="#page6"><b>contact</b></a></li>
+		</ul>
+	</nav>
+</header>
+<!-- header navigation end -->
+<!-- aside navigation -->
+<aside style="top: 236px; display: block;">
+		<a href="#page1" class="selected"><b>首页</b></a>
+		<a href="#page2"><b>关于我</b></a>
+		<a href="#page3"><b>专业技能</b></a>
+		<a href="#page4"><b>我的经历</b></a>
+		<a href="#page5"><b>我的作品</b></a>
+		<a href="#page6"><b>联系我</b></a>
+</aside>
+<!-- aside navigation end -->
+<!-- home page -->
+<div id="dowebok" class="fullpage-wrapper" style="height: 100%; position: relative; touch-action: none; transform: translate3d(0px, 0px, 0px);">
+	<!-- home -->
+	<div class="section one fp-section active" data-anchor="page1" style="height: 662px;">
+		<div id="home" class="home_zoom" style="display: block;">
+			<div id="home_content" style="padding-top: 79.5px;">
+				<div id="home_head" style="margin-top: 100px;">
+					<div id="home_head_content">
+						<img src="dir/photo1.jpg" id="home_photo1" alt="">
+						<img src="dir/photo2.jpg" id="home_photo2" alt="">
+					</div>
+				</div>
+				<div id="home_info">
+					<p id="home_info1" style="display: block;">秦时升明月，天行出九歌</p>
+					<div id="home_info_box" style="width: 800px;">
+						<p id="home_info2" style="display: block;">韩信</p>
+						<p id="home_info3" style="display: block;">100岁</p>
+						<p id="home_info4" style="display: block;">一名秦时明月动漫爱好者</p>
+						<p id="home_info5" style="display: block;">s844510534@163.com</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- home end -->
+	<!-- about -->
+	<div class="section two fp-section" data-anchor="page2" style="height: 662px;">
+		<div id="about">
+			<div id="about_content" style="padding-top: 25.3333px;">
+				<div class="title">
+					<h1>关于我</h1>
+				</div>
+				<div id="about_list_content">
+					<div class="about_list" id="about_list1">
+						<div class="about_list_eg" id="about_en_edu">education</div>
+						<div class="about_list_cn" id="about_cn_edu">学历<p>幼稚园</p></div>
+					</div>
+                    <div class="about_list">
+                        <div class="about_list_eg" id="about_en_age">age</div>
+                        <div class="about_list_cn" id="about_cn_age">年龄<p>100岁</p></div>
+                    </div>
+                    <div class="about_list">
+                        <div class="about_list_eg" id="about_en_loc">location</div>
+                        <div class="about_list_cn" id="about_cn_loc">坐标<p>纽约</p></div>
+                    </div>
+                    <div class="about_list">
+                        <div class="about_list_eg" id="about_en_sta">status</div>
+                        <div class="about_list_cn" id="about_cn_sta">状态<p>自由人</p></div>
+                    </div>
+				</div>
+
+				<div id="about_info"><p>毕业于洛夫斯基大学</p><p>喜欢秦时明月</p><p>AngularJS JqueryJS VueJs</p><p>层出不穷的框架让人兴奋，而不同框架背后的思路却在逐渐统一</p></div>
+			</div>
+		</div>
+	</div>
+    <!-- about end -->
+    <!-- skill -->
+    <div class="section three fp-section" data-anchor="page3" style="height: 662px;">
+		<div id="skill">
+			<div id="skill_content" style="padding-top: 25.3333px;">
+				<div class="title">
+					<h1>专业技能</h1>
+				</div>
+				<div id="skill_info"><p>熟悉HTML/CSS/JavaScript等前端技术;熟练运用JavaScript/jQuery/Ajax完成服务器交互及动态效果</p></div>
+                <div id="skill_list">
+                    <div class="skill_list_content" id="skill_list1">
+                        <div class="skill_icon" id="skill_icon1"></div>
+                        <div class="skill_name">AngularJs</div>
+                        <div class="skill_flag"></div>
+                        <div class="skill_int" id="skill_int1"><ul><li>熟练运用angularJS处理移动端的模块开发</li><li>模块组件化</li><li>了解双绑的背后实现</li><li>熟练的指令编写</li></ul></div>
+                    </div>
+                    <div class="skill_list_content" id="skill_list2">
+                        <div class="skill_icon" id="skill_icon2"></div>
+                        <div class="skill_name">HTML</div>
+                        <div class="skill_flag"></div>
+                        <div class="skill_int" id="skill_int2"><ul><li>深刻理解Web标准</li><li>熟练运用html标签</li><li>熟悉xml及xhtml标记语言</li><li>掌握html5如SVG，localstorage新特性</li></ul></div>
+                    </div>
+                    <div class="skill_list_content" id="skill_list3">
+                        <div class="skill_icon" id="skill_icon3"></div>
+                        <div class="skill_name">CSS</div>
+                        <div class="skill_flag"></div>
+                        <div class="skill_int" id="skill_int3"><ul><li>熟练运用css及css3新属性</li><li>注重浏览器兼容性，熟悉常见的css hack（兼容至IE8）</li><li>掌握bootstrap框架及源码的实现</li><li>掌握css预编译器Less及Sass</li></ul></div>
+                    </div>
+                    <div class="skill_list_content" id="skill_list4">
+                        <div class="skill_icon" id="skill_icon4"></div>
+                        <div class="skill_name">JavaScript</div>
+                        <div class="skill_flag"></div>
+                        <div class="skill_int" id="skill_int4"><ul><li>掌握jQuery</li><li>掌握原生JS的编程</li><li>注重JavaScript性能优化</li><li>正在学习ES6</li></ul></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- skill end -->
+    <!-- experience -->
+    <div class="section four fp-section" data-anchor="page4" style="height: 662px;">
+    	<div id="exp">
+        	<div id="exp_content" style="padding-top: 30.1667px;">
+        		<div class="title">
+                	<h1>项目经验</h1>
+                </div>
+                <div id="exp_info" class="exp_scale"><p>2015年开始前段工作</p></div>
+                <div id="exp_list_slider" style="width: 900px;">
+                	<div id="exp_list_slider_content" class="exp_scale">
+                        <div id="exp_list_content" style="width: 2700px;">
+                            <div class="exp_list">
+                                <div class="exp_list_left">
+                               		<div id="exp_list_left1">
+                                        <dl>
+                                            <dt>移动端保险业务</dt>
+                                            <dd>1、该应用主要采用rem进行布局以适配移动端各设备。
+
+</dd>
+                                            <dd>2、主要用到zeptoJs和swipperJs框架进行页面效果制作。</dd>
+                                            <dd>3、在制作过程中比较难的是写一个日历应用。因产品不断改需求，逻辑这方面也       得改，比较费劲。</dd>
+                                        </dl>
+                                    </div>
+                                </div>
+                        	</div>
+                        	<div class="exp_list">
+                                <div class="exp_list_left">
+                                	<div id="exp_list_left2">
+                                        <dl>
+                                            <dt>公司BOSS和Business运营管理系统</dt>
+                                            <dd>1、因为该网站是公司内部使用用来处理公司内部业务数据，所以整个项目用         Angular和Bootstrap搭建比较合适
+
+
+</dd>
+                                            <dd>2、在使用过程中交繁琐的地方就是页面需要配置路由。</dd>
+                                            <dd>3、最大的难点就是指令这块，但最方便使用的也是指令。</dd>
+                                            <dd>4、在和后台交互时接口联调比较麻烦，然后就是感受到Angular框架的强大，主    要是面向数据操作，而不是用来操作DOM。</dd>
+                                        </dl>
+                                    </div>
+                            	</div>
+                        	</div>
+                            <div class="exp_list">
+                                <div class="exp_list_left">
+                                    <div id="exp_list_left3">
+                                        <dl>
+                                            <dt>广州领壹科技有限公司网站</dt>
+                                            <dd>1、和UE、UI以及产品商讨网站的构成以及具体效果。
+      
+                   以及交互效果。
+      </dd>
+                                            <dd>2、使用HTML和CSS进行效果图的还原。</dd>
+                                            <dd>3、使用JavaScript和JQuery实现页面上的动态效果（首页选项卡、轮播图）</dd>
+                                            <dd>4、使用Ajax与后台进行交互完用户的登录以及注册功能的实现。</dd>
+                                        </dl>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    <div id="exp_list_to">
+                    	<div id="exp_list_toleft"><img src="dir/exp_list_toleft.png"></div>
+                    	<div id="exp_list_toright"><img src="dir/exp_list_toright.png"></div>
+                    </div>
+                    </div>
+                    <div id="exp_timeline" class="exp_scale">
+                    	<div>
+                            <a href="http://www.flqin.com/#" title="2014年3月~2014年9月"></a>
+                            <a href="http://www.flqin.com/#" title="2014年9月~2015年7月"></a>
+                            <a href="http://www.flqin.com/#" title="2015年7月~现在"></a>
+                        </div>
+                    </div>             
+                </div>
+            </div>
+        </div>
+    </div> 
+    <!-- experience end -->
+    <!-- demo -->
+    <div class="section five fp-section" data-anchor="page5" style="height: 662px;">
+    	<div id="demo">
+        	<div id="demo_content" style="padding-top: 36.8333px;">
+            	<div class="title">
+                	<h1>我的作品</h1>
+                </div>
+                <div id="demo_content_list">
+                    <ul class="demo_box">
+                    	<li class="demo_scale">
+                            <div class="demo_box_content">
+                            	<div class="demo_box_hover">
+                                    <p class="demo_box_title">聚划算</p>
+                                    <span class="demo_box_hover_icon">
+                                        <a href="聚划算/index.html" target="_blank" class="demo_box_link">
+                                            <img src="dir/demo-link.png" alt="">
+                                        </a>
+                                    </span>
+                                </div>
+                                <img src="dir/demo_box1.jpg" alt="" class="demo_box_bg">
+                            </div>
+                        </li>
+                        <li class="demo_scale">
+                            <div class="demo_box_content">
+                                <div class="demo_box_hover">
+                                    <p class="demo_box_title">大通汽车</p>
+									<span class="demo_box_hover_icon">
+										<a href="大通汽车/首页.html" target="_blank" class="demo_box_link">
+											<img src="dir/demo-link.png" alt="">
+										</a>
+									</span>
+								</div>
+								<img src="dir/demo_box2.jpg" alt="" class="demo_box_bg">
+							</div>
+                        </li>
+                        <li class="demo_scale">
+							<div class="demo_box_content">
+                            	<div class="demo_box_hover">
+									<p class="demo_box_title">灵魂回响</p>
+                                    <span class="demo_box_hover_icon">
+                                    	<a href="灵魂回响/灵魂回响.html" target="_blank" class="demo_box_link">
+											<img src="dir/demo-link.png" alt="">
+                                        </a>
+                                    </span>
+                                </div>
+								<img src="dir/demo_box3.jpg" alt="" class="demo_box_bg">
+                            </div>
+                        </li>
+                        <li class="demo_scale">
+							<div class="demo_box_content">
+                            	<div class="demo_box_hover">
+                                	<p class="demo_box_title">美丽说</p>
+                                    <span class="demo_box_hover_icon">
+                                    	<a href="美丽说/美丽说.html" target="_blank" class="demo_box_link">
+											<img src="dir/demo-link.png" alt="">
+                                        </a>
+                                    </span>
+                                </div>
+								<img src="dir/demo_box4.jpg" alt="" class="demo_box_bg">
+                            </div>
+                        </li>
+                    </ul>
+				</div> 
+               <!--  <div id="demo_info" class="demo_scale">
+                    <p>这是我的部分demo。</p>
+                    <p>更多demo请移步<a href="http://www.flqin.com/#" class="md-trigger" data-modal="modal-3">这里</a>。</p>
+                </div> -->
+            </div>
+        </div>
+    </div>
+    <!-- demo end -->
+    <!-- contact -->
+	<div class="section six fp-section" data-anchor="page6" style="height: 662px;">
+		<div id="contact">
+			<div id="contact_content">
+				<div class="title">
+					<h1>联系我</h1>
+				</div>
+                <div id="contact_head">
+					<div id="contact_head1">木兰辞</div>
+                    <div id="contact_head2">
+                    	<span>inspiration</span>
+                        <span>code</span>
+                        <span>dream</span>
+                        <span>future</span>
+                    </div>
+                </div>
+                <div id="contact_info" class="contact_scale">
+                    <ul><li>唧唧复唧唧</li><li>木兰当户织</li><li>不闻机杼声</li><li>惟闻女叹息</li><li>世界那么大,我想去看看</li></ul>
+                </div>
+                <!-- <div id="contact_way">
+					<div id="contact_message1" class="contact_message contact_scale">follow me</div>
+                    <div id="contact_form">
+                        梦想成为前端工程师？<br>
+                        前端自学迷茫？<br>
+                        前端面试会问什么？<br>
+                        想学习该简历怎么制作？<br><br>
+                        QQ小群：<a target="_blank" href="http://shang.qq.com/wpa/qunwpa?idkey=959d5b7e9bab932c87cdd68372cfefd772293deaeceaba3e015ba35463200fe5">Fe.d小分队</a><br><br>
+                        互相学习交流，共同进步O(∩_∩)O~
+                    </div>
+                    <div id="contact_message2" class="contact_message">谢谢</div>
+                </div> -->
+            </div>
+      <!--       <footer class="contact_scale">
+				<div class="contact_scale footer">
+                    <a href="http://blog.csdn.net/zhcscs" target="_blank">CSDN</a>|
+                    <a href="http://weibo.com/zky2013" target="_blank">微博</a>|
+                    <a href="https://www.zhihu.com/people/fezky" target="_blank">知乎</a>|
+                    <a href="https://segmentfault.com/u/keyu2016" target="_blank">豆瓣</a>|
+                    <a href="https://github.com/zhaoky" target="_blank">Github</a>
+                </div>
+				<div class="contact_scale footer">All Rights Reserved&nbsp;</div>
+				<div class="contact_scale footer"><a href="http://www.miitbeian.gov.cn/" target="_blank">蜀ICP备15021330号</a>&nbsp;Copyright © 2015 - 2016</div>
+			</footer> -->
+        </div>
+	</div>
+    <!-- contact end -->
+</div>
+<!-- home page end -->
+<!-- pop layer -->
+<div class="md-modal md-effect-11" id="modal-1">
+	<div class="md-content">
+		<h3>小黄人O(∩_∩)O~</h3>
+		<div>
+			<img src="dir/Minions.jpg" alt="">
+			<button class="md-close">明白了</button>
+		</div>
+	</div>
+</div>
+<div class="md-modal md-effect-13" id="modal-2">
+	<div class="md-content">
+		<h3>学习路线</h3>
+		<div class="modal-learn">
+           	<p>学习用到的书籍</p>
+            <ul>
+                <li>《html5+css3基础教程（第七版）》</li>
+                <li>《css揭秘》</li>
+                <li>《JavaScript DOM编程艺术（第二版）》</li>
+                <li>《锋利的jQuery（第二版）》</li>
+                <li>《JavaScript高级程序设计（第三版）》</li>
+                <li>《JavaScript权威指南》</li>
+            </ul>
+			<button class="md-close">明白了</button>
+		</div>
+	</div>
+</div>
+<div class="md-modal md-effect-11" id="modal-3">
+    <div class="md-content">
+        <h3>移动APP：兰途校园</h3>
+        <div class="modal-example">
+            <p>已上线学校</p>
+            <ul>
+                <li><span><a href="https://app.cufe.edu.cn/" target="_blank">中央财经大学</a></span></li>
+                <li><span><a href="https://app.bjtu.edu.cn/getapp/" target="_blank">北京交通大学</a></span></li>
+                <li><span><a href="https://bhna.buaa.edu.cn/bhna/" target="_blank">北京航空航天大学</a></span></li>
+                <li><span><a href="https://app.nacta.edu.cn/" target="_blank">中国戏曲学院</a></span></li>
+                <li><span><a href="https://download.haust.edu.cn/haust/getApp/" target="_blank">河南科技大学</a></span></li>
+                <li><span><a href="http://app.bisu.edu.cn/" target="_blank">北京第二外国语大学</a></span></li>
+                <li><span><a href="http://app.swpu.edu.cn/" target="_blank">西南石油大学</a></span></li>
+            </ul>
+            <p>更多在建...</p>
+            <button class="md-close">明白了</button>
+        </div>
+    </div>
+</div>
+<div class="md-overlay"></div>
+<!-- pop layer -->
+    
+<script src="dir/jquery-1.11.2.min.js"></script>
+<script src="dir/jquery.easing.min.js"></script>
+<script src="dir/jquery.fullPage.min.js"></script>
+<script src="dir/classie.js"></script>
+<script src="dir/cssParser.js"></script>
+<script src="dir/modalEffects.js"></script>
+<script type="text/javascript" src="dir/index.js"></script>
 </body>
+
 </html>
